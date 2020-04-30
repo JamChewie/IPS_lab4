@@ -153,10 +153,7 @@ namespace TASK2
 
 			InitMatrix(matrix, numb_rows, numb_cols);
 
-			PrintMatrix(matrix, numb_rows, numb_cols);
-			
-			std::thread first_thr(FindAverageValues, eprocess_type::by_rows, matrix, numb_rows, numb_cols, average_vals_in_rows);
-			std::thread second_thr(FindAverageValues, eprocess_type::by_cols, matrix, numb_rows, numb_cols, average_vals_in_cols);
+			PrintMatrix(matrix, numb_rows, numb_cols);			
 
 			first_thr.join();
 			second_thr.join();
