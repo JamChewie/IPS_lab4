@@ -152,11 +152,8 @@ namespace TASK2
 			double* average_vals_in_cols = new double[numb_cols];
 
 			InitMatrix(matrix, numb_rows, numb_cols);
-
-			PrintMatrix(matrix, numb_rows, numb_cols);			
-
-			first_thr.join();
-			second_thr.join();
+			PrintMatrix(matrix, numb_rows, numb_cols);  
+			
 			auto start = clock() / 1000.0;
 			FindAverageValues(eprocess_type::by_rows, matrix, numb_rows, numb_cols, average_vals_in_rows);
 			FindAverageValues(eprocess_type::by_cols, matrix, numb_rows, numb_cols, average_vals_in_cols);
